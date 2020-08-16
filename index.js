@@ -8,7 +8,7 @@ function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
-      name: "name",
+      name: "title",
       message: "What is the title of your project?"
     },
     {
@@ -65,21 +65,27 @@ ${answers.description}
 * [Questions](##Questions)
 
 ## Installation
+${answers.installation}
 
 ## Usage
+${answers.usage}
 
 ## License
 
 ## Contributers
+${answers.contributing}
 
 ## Tests
+${answers.test}
 
-## Questions`;
+## Questions
+If you have any questions or suggestions, please contact me here:
+[${answers.questions}](${answers.questions})`;
 }
 
 promptUser()
   .then(function(answers) {
-    const html = generateMD(answers);
+    const MD = generateMD(answers);
 
     return writeFileAsync("README.md", MD);
   })
