@@ -74,6 +74,7 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
+This project uses the ${answers.license} license.
 
 ## Contributers
 ${answers.contributing}
