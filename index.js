@@ -29,7 +29,7 @@ function promptUser() {
     {
       type: "checkbox",
       name: "license",
-      choices: ["MIT License", "GNU Lesser General Public License v3.0", "Mozilla Public License 2.0", "GNU Affero General Public License v3.0", "The Unlicense", "Apache License 2.0", "GNU General Public License v3.0"],
+      choices: ["MIT", "GNUv3.0", "MPL", "Unlicense", "Apache2.0", "GNU-GPL"],
       message: "Choose which license you would like for your project:"
     },
     {
@@ -50,10 +50,17 @@ function promptUser() {
   ]);
 }
 
+// function licenseBadge(answers){
+//   if (answers.license === "MIT License"){
+//     return "https://img.shields.io/badge/license-MIT-green?link=https://api.github.com/licenses/mit&linkhttps://api.github.com/licenses/mit"
+//   }
+// }
+
+
 function generateMD(answers) {
   return `
-  https://img.shields.io/badge/license-%24%7Banswers.license%7D-yellow
-
+  https://img.shields.io/badge/license-${answers.license}-green
+  
 # ${answers.title}
 
 ## Description
