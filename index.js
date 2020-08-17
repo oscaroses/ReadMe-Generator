@@ -27,8 +27,9 @@ function promptUser() {
       message: "Please describe how your project will run."
     },
     {
-      type: "input",
+      type: "checkbox",
       name: "license",
+      choices: ["MIT", "GNU lesser", "Mozilla", "Unlicense", "Apache"],
       message: "What license does your project use?"
     },
     {
@@ -37,14 +38,14 @@ function promptUser() {
       message: "Please list any contributers to your project."
     },
     {
-        type: "input",
-        name: "test",
-        message: "Give an example of a test you ran on your project."
+      type: "input",
+      name: "test",
+      message: "Give an example of a test you ran on your project."
     },
     {
-        type: "input",
-        name: "questions",
-        message: "Provide an email where users can contact you with questions."
+      type: "input",
+      name: "questions",
+      message: "Provide an email where users can contact you with questions."
     }
   ]);
 }
@@ -84,14 +85,14 @@ If you have any questions or suggestions, please contact me here:
 }
 
 promptUser()
-  .then(function(answers) {
+  .then(function (answers) {
     const MD = generateMD(answers);
 
     return writeFileAsync("README.md", MD);
   })
-  .then(function() {
+  .then(function () {
     console.log("Successfully wrote to README.md");
   })
-  .catch(function(err) {
+  .catch(function (err) {
     console.log(err);
   });
