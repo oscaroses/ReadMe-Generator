@@ -1,9 +1,12 @@
+// Thes are the required modules
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
+// This const will retain the data to be generated
 const writeFileAsync = util.promisify(fs.writeFile);
 
+//Object containing questions that are prompted
 function promptUser() {
   return inquirer.prompt([
     {
@@ -27,9 +30,9 @@ function promptUser() {
       message: "Please describe how your project will run."
     },
     {
-      type: "checkbox",
+      type: "list",
       name: "license",
-      choices: ["MIT License", "GNU Lesser General Public License v3.0", "Mozilla Public License 2.0", "GNU Affero General Public License v3.0", "The Unlicense", "Apache License 2.0", "GNU General Public License v3.0"],
+      choices: ["MIT_License", "GNU_Lesser_General_Public_License_v3.0", "Mozilla_Public_License_2.0", "GNU_Affero_General_Public_License_v3.0", "The_Unlicense", "Apache_License_2.0", "GNU_General_Public_License_v3.0"],
       message: "Choose which license you would like for your project:"
     },
     {
@@ -50,10 +53,11 @@ function promptUser() {
   ]);
 }
 
+//Template Literal where data collected from prompts is appended
 function generateMD(answers) {
   return `
 
-  https://img.shields.io/badge/license-${answers.license}-green  
+  ![GitHub](https://img.shields.io/badge/license-${answers.license}-green)
   
 # ${answers.title}
 
@@ -88,6 +92,7 @@ If you have any questions or suggestions, please contact me here:
 [${answers.questions}](${answers.questions})`;
 }
 
+//This will run the prompts "then" write the file. A log will let you know if it was succesful.
 promptUser()
   .then(function (answers) {
     const MD = generateMD(answers);
