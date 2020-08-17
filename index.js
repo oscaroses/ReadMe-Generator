@@ -29,8 +29,8 @@ function promptUser() {
     {
       type: "checkbox",
       name: "license",
-      choices: ["MIT", "GNU lesser", "Mozilla", "Unlicense", "Apache"],
-      message: "What license does your project use?"
+      choices: ["MIT License", "GNU Lesser General Public License v3.0", "Mozilla Public License 2.0", "GNU Affero General Public License v3.0", "The Unlicense", "Apache License 2.0", "GNU General Public License v3.0"],
+      message: "Choose which license you would like for your project:"
     },
     {
       type: "input",
@@ -52,6 +52,8 @@ function promptUser() {
 
 function generateMD(answers) {
   return `
+  https://img.shields.io/badge/license-%24%7Banswers.license%7D-yellow
+
 # ${answers.title}
 
 ## Description
