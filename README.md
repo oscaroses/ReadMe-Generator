@@ -1,48 +1,15 @@
-![GitHub](https://img.shields.io/badge/license-MIT_License-green)
-
 # README Generator
 
 ## Description
 
-This application will generate a markdown file for the user.
+This application will generate a markdown file for the user. It is ran inside a command console. When the user initiates the index file (node index.js), they will be presented with a series of prompts. Once the data is collected from the user, it is apended to a template literal and a markdown file is generated.
 
-## Table of Contents
-
-- [Installation](##Installation)
-- [Usage](##Usage)
-- [Contributers](##Contributers)
-- [License](##License)
-- [Tests](##Tests)
-- [Questions](##Questions)
-
-## Installation
-
-Run the index.js file in node.
-
-## Usage
-
-Once the user runs the index.js file, they will be prompted with a series of questions. Once the data is collected, it is appended to a temperate literal, then a markdown file is generated.
-
-## License
-
-This project uses the MIT_License license.
-
-## Contributers
+## Credits
 
 Javascript
-
-## Tests
-
-Trial and error
-
-## Questions
-
-If you have any questions or suggestions, please contact me here:
-[oscar.oses.1127@gmail.com](oscar.oses.1127@gmail.com)
-
-## Additional Info
-
-The section above was created with this application!
+Node
+Visual Studio Code
+Github
 
 ## Video
 
