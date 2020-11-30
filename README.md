@@ -1,21 +1,35 @@
-# README Generator
+
+
+  ![GitHub](https://img.shields.io/badge/license-MIT_License-green)
+  
+# React Portfolio
 
 ## Description
+This is my portfolio I created using react.
 
-This application will generate a markdown file for the user. It is ran inside a command console. When the user initiates the index file (node index.js), they will be presented with a series of prompts. Once the data is collected from the user, it is apended to a template literal and a markdown file is generated.
+## Table of Contents
+* [Installation](##Installation)
+* [Usage](##Usage)
+* [Contributers](##Contributers)
+* [License](##License)
+* [Tests](##Tests)
+* [Questions](##Questions)
 
-## Credits
+## Installation
+Install the dependencies in the command line using npm install. The use the command npm start to deploy the page.
 
-Javascript
-Node
-Visual Studio Code
-Github
+## Usage
+Once npm start is ran, the portfolio can be viewed in the web browser.
 
-## Video
+## License
+This project uses the MIT_License license.
 
-https://drive.google.com/file/d/1C3U6elJsnyOPjix6rnVJkDgFLZSg73x1/view?usp=sharing
+## Contributers
+React Node Material UI
 
-## Screenshots
+## Tests
+Trial and Error
 
-![code1](images/code1.png)
-![code2](images/code2.png)
+## Questions
+If you have any questions or suggestions, please contact me here:
+[oscar.oses.1127@gmail.com](oscar.oses.1127@gmail.com)
